@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
 
 @theme {
   --color-background: hsl(240, 10%, 4%);
@@ -23,16 +27,16 @@
 
 @layer base {
   * {
-    @apply border-border selection:bg-white/10 selection:text-white;
+    @apply selection:bg-white/10 selection:text-white border-border outline-ring/50;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply antialiased bg-background text-foreground;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth font-sans;
   }
 
   img {
@@ -55,21 +59,21 @@
   }
 
   .text-gradient-purple {
-    @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent;
+    @apply bg-linear-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent;
   }
 
   .text-gradient-blue {
-    @apply bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent;
+    @apply bg-linear-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent;
   }
 
   .text-gradient-orange {
-    @apply bg-gradient-to-r from-red-500 via-orange-400 to-yellow-500 bg-clip-text text-transparent;
+    @apply bg-linear-to-r from-red-500 via-orange-400 to-yellow-500 bg-clip-text text-transparent;
   }
 
   .hero-gradient {
     background: linear-gradient(
       180deg,
-      rgba(26, 26, 26, 0.8) 0%,
+      rgba(37, 99, 235, 0.2) 0%,
       rgba(18, 18, 18, 1) 100%
     );
   }
