@@ -1,6 +1,9 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const ScrollAnimation = () => {
+  const { pathname } = useLocation();
+
   useEffect(() => {
     const handleIntersect = (entries, observer) => {
       entries.forEach(entry => {
@@ -20,10 +23,8 @@ const ScrollAnimation = () => {
     const animatedElements = document.querySelectorAll(".animate-on-scroll");
     animatedElements.forEach(el => observer.observe(el));
 
-    return () => {
-      animatedElements.forEach(el => observer.unobserve(el));
-    };
-  }, []);
+    return () => observer.disconnect();
+  }, [pathname]);
 
   return null;
 };

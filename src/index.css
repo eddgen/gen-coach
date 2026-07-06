@@ -9,6 +9,8 @@
   --color-foreground: hsl(0 0% 98%);
   --color-card: hsl(240 10% 3.9%);
   --color-card-foreground: hsl(0 0% 98%);
+  --color-popover: hsl(240 10% 6%);
+  --color-popover-foreground: hsl(0 0% 98%);
   --color-primary: hsl(0 0% 98%);
   --color-primary-foreground: hsl(240 5.9% 10%);
   --color-secondary: hsl(240 3.7% 15.9%);

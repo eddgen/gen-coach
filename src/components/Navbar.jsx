@@ -65,18 +65,19 @@ const Navbar = () => {
           >
             Testimonials
           </a>
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="text-sm font-medium hover:text-white transition-colors"
           >
             Contact
-          </a>
+          </Link>
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
           <Button
             className="bg-linear-to-r from-blue-600 to-purple-600 hover:from-purple-700 hover:to-pink-700 text-white border-0"
             size="lg"
+            onClick={() => navigate("/contact")}
           >
             Get in touch
           </Button>
@@ -112,13 +113,13 @@ const Navbar = () => {
             >
               Testimonials
             </a>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="py-2 text-sm font-medium"
               onClick={toggleMobileMenu}
             >
               Contact
-            </a>
+            </Link>
             <div className="flex flex-col gap-2 pt-2">
               <Button
                 variant="outline"

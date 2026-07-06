@@ -46,6 +46,16 @@ export const features = [
   },
 ];
 
+export const interests = [
+  "Weight Loss",
+  "Muscle Building & Strength",
+  "Nutrition & Diet Planning",
+  "1-on-1 Personal Training",
+  "Group Classes",
+  "Online Coaching",
+  "Other",
+];
+
 export const memberships = [
   {
     title: "Basic",

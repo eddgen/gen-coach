@@ -5,6 +5,7 @@ import Carousel from "./components/MyCarousel";
 import ScrollAnimation from "./components/ScrollAnimation";
 import CardsSection from "./components/Cards";
 import Memberships from "./components/Memberships";
+import Contact from "./components/Contact";
 
 function App() {
 
@@ -29,6 +30,15 @@ function App() {
             element={
               <>
                 <Memberships />
+                <ScrollAnimation />
+              </>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+                <Contact />
                 <ScrollAnimation />
               </>
             }
