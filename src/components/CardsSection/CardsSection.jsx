@@ -1,19 +1,8 @@
-import { features } from "@/data";
+import { features } from "../../data";
+import FeatureCard from "./FeatureCard";
 
-const FeatureCard = ({ icon: Icon, title, description }) => {
-  return (
-    <div className="glass-card p-6 rounded-xl animate-on-scroll">
-      <div className="bg-linear-to-br from-purple-500 to-pink-600 p-3 w-fit rounded-lg mb-4">
-        <Icon className="w-6 h-6" />
-      </div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-400">{description}</p>
-    </div>
-  );
-};
 
 const CardsSection = () => {
-
   return (
     <section id="features" className="py-24 bg-black">
       <div className="container px-4 mx-auto">
@@ -28,14 +17,17 @@ const CardsSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-            />
-          ))}
+          {features.map((feature) => {
+            const { id, icon, title, description } = feature;
+            return (
+              <FeatureCard
+                key={id}
+                icon={icon}
+                title={title}
+                description={description}
+              />
+            );
+          })}
         </div>
       </div>
     </section>

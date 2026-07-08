@@ -1,5 +1,5 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import guy from "../assets/images/tough-guy.jpg";
 const Hero = () => {
   const scrollToFeatures = () => {

@@ -6,39 +6,66 @@ import img5 from "./assets/images/carousel-assets/5.jpeg";
 
 import { Dumbbell, Users, Clock, Trophy, Heart, Zap } from "lucide-react";
 
-export const images = [img1, img2, img3, img4, img5];
+export const images = [
+  {
+    id: 1,
+    img: img1,
+  },
+  {
+    id: 2,
+    img: img2,
+  },
+  {
+    id: 3,
+    img: img3,
+  },
+  {
+    id: 4,
+    img: img4,
+  },
+  {
+    id: 5,
+    img: img5,
+  },
+];
 
 export const features = [
   {
+    id: 1,
     icon: Dumbbell,
     title: "State-of-the-Art Training",
     description: "Train with a perfect execution guided by us",
   },
   {
+    id: 2,
     icon: Users,
     title: "Expert Trainers",
     description:
       "Our certified trainers provide personalized guidance to help you achieve your goals safely.",
   },
   {
+    id: 3,
     icon: Clock,
     title: "24/7 Guidance",
     description:
       "Your fitness doesn't sleep, and neither do we. Contact us or the community anytime",
   },
   {
+    id: 4,
     icon: Trophy,
     title: "Results Guaranteed",
     description:
       "Our proven methods and dedicated approach ensure you'll see the changes you desire.",
   },
   {
+    id: 5,
     icon: Heart,
     title: "Supportive Community",
     description:
       "Join a community of like-minded individuals all working towards their best selves.",
   },
   {
+    id: 6,
     icon: Zap,
     title: "Expertise",
     description:

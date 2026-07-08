@@ -5,25 +5,26 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "./ui/carousel";
 
-export function MyCarousel() {
+export function CustomCarousel() {
   return (
     <Carousel className="w-8/10 max-w-3xl md:max-w-4xl lg:max-w-5xl mx-auto py-20">
       <CarouselContent className="-ml-1">
-        {images.map((src, index) => (
-          <CarouselItem key={index} className="basis-1/2 pl-1 lg:basis-1/3">
-            <div className="p-1">
-              <div className="flex aspect-square items-center justify-center p-2">
+        {images.map((image) => {
+          const {id , img} = image;
+          return (
+            <CarouselItem key={id} className="basis-1/2 pl-1 lg:basis-1/3">
+              <div className="aspect-square p-3">
                 <img
-                  src={src}
-                  alt={`Slide ${index + 1}`}
+                  src={img}
+                  alt={`Slide ${id + 1}`}
                   className="w-full h-full object-cover rounded-md"
                 />
               </div>
-            </div>
-          </CarouselItem>
-        ))}
+            </CarouselItem>
+          );
+        })}
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />
@@ -31,4 +32,4 @@ export function MyCarousel() {
   );
 }
 
-export default MyCarousel;
+export default CustomCarousel;

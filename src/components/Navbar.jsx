@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -25,16 +25,6 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const handleLogin = () => {
-    navigate("/login");
-    setMobileMenuOpen(false);
-  };
-
-  const handleSignup = () => {
-    navigate("/signup");
-    setMobileMenuOpen(false);
-  };
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -45,8 +35,9 @@ const Navbar = () => {
     >
       <div className="w-full mx-auto px-10 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-extrabold tracking-tight text-gradient-blue"
-          onClick={scrollToTop}
+          <span
+            className="text-2xl font-extrabold tracking-tight text-gradient-blue"
+            onClick={scrollToTop}
           >
             GEN COACH
           </span>
@@ -59,12 +50,6 @@ const Navbar = () => {
           >
             Memberships
           </Link>
-          <a
-            href="#testimonials"
-            className="text-sm font-medium hover:text-white transition-colors"
-          >
-            Testimonials
-          </a>
           <Link
             to="/contact"
             className="text-sm font-medium hover:text-white transition-colors"
@@ -88,17 +73,9 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-white/10 animate-fade-in">
           <div className="w-full mx-auto px-4 py-4 flex flex-col gap-4">
-            <a
-              href="#features"
-              className="py-2 text-sm font-medium"
-              onClick={toggleMobileMenu}
-            >
-              Features
-            </a>
             <Link
               to="/memberships"
               className="py-2 text-sm font-medium"
