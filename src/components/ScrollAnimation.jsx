@@ -5,6 +5,7 @@ const ScrollAnimation = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleIntersect = (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

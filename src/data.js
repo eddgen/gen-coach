@@ -6,6 +6,11 @@ import img5 from "./assets/images/carousel-assets/5.jpeg";
 
 import { Dumbbell, Users, Clock, Trophy, Heart, Zap } from "lucide-react";
 
+export const navLinks = [
+  { id: 1, to: "/memberships", label: "Memberships" },
+  { id: 2, to: "/contact", label: "Contact" },
+];
+
 export const images = [
   {
     id: 1,
