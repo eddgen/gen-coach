@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navigation/Navbar";
+import Footer from "./components/Footer";
 
 import HomePage from "./pages/HomePage";
 import MembershipsPage from "./pages/MembershipsPage";
@@ -16,6 +17,7 @@ function App() {
           <Route path="/memberships" element={<MembershipsPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        <Footer />
         <ScrollAnimation />
       </div>
     </>

@@ -1,13 +1,20 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import guy from "../assets/images/tough-guy.jpg";
+import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
+  const navigate = useNavigate();
+
   const scrollToFeatures = () => {
     document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section id="hero" className="animate-on-scroll relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
+    <section
+      id="hero"
+      className="animate-on-scroll relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16"
+    >
       {/* Background gradient overlay */}
       <div className="absolute inset-0 hero-gradient"></div>
 
@@ -28,7 +35,10 @@ const Hero = () => {
             knowledge, trainers, and a supportive community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:via-blue-700  hover:via-25% hover:to-pink-700 text-white text-lg py-6 px-8 font-medium group">
+            <Button
+              className="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:via-blue-700  hover:via-25% hover:to-pink-700 text-white text-lg py-6 px-8 font-medium group"
+              onClick={() => navigate("/contact")}
+            >
               Start Your Journey
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
