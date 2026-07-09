@@ -50,7 +50,7 @@ const MembershipCard = ({
               : "bg-white/10 hover:bg-white/20"
           } text-white`}
         >
-          Choose Plan
+          Alege Planul
         </Button>
       </Link>
     </div>
@@ -66,16 +66,16 @@ const Memberships = () => {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Choose Your <span className="text-gradient-purple">Membership</span>
+            Alege-ți <span className="text-gradient-purple">Abonamentul</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Find the perfect plan that fits your fitness goals and lifestyle. No
-            long-term contracts, cancel anytime. All the higher tiers include
-            the benefits of the ones before.
+            Găsește planul perfect care se potrivește obiectivelor și stilului
+            tău de viață. Fără contracte pe termen lung, anulează oricând.
+            Toate planurile superioare includ beneficiile celor anterioare.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
           {memberships.map((membership, index) => (
             <MembershipCard
               key={index}

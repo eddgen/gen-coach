@@ -7,7 +7,7 @@ import img5 from "./assets/images/carousel-assets/5.jpeg";
 import { Dumbbell, Users, Clock, Trophy, Heart, Zap } from "lucide-react";
 
 export const navLinks = [
-  { id: 1, to: "/memberships", label: "Memberships" },
+  { id: 1, to: "/memberships", label: "Abonamente" },
   { id: 2, to: "/contact", label: "Contact" },
 ];
 
@@ -38,96 +38,96 @@ export const features = [
   {
     id: 1,
     icon: Dumbbell,
-    title: "State-of-the-Art Training",
-    description: "Train with a perfect execution guided by us",
+    title: "Antrenament de Ultimă Generație",
+    description: "Antrenează-te cu o execuție perfectă, ghidat de noi",
   },
   {
     id: 2,
     icon: Users,
-    title: "Expert Trainers",
+    title: "Antrenori Experți",
     description:
-      "Our certified trainers provide personalized guidance to help you achieve your goals safely.",
+      "Antrenorii noștri certificați oferă îndrumare personalizată pentru a te ajuta să îți atingi obiectivele în siguranță.",
   },
   {
     id: 3,
     icon: Clock,
-    title: "24/7 Guidance",
+    title: "Îndrumare 24/7",
     description:
-      "Your fitness doesn't sleep, and neither do we. Contact us or the community anytime",
+      "Fitness-ul tău nu doarme, și nici noi. Contactează-ne pe noi sau comunitatea oricând",
   },
   {
     id: 4,
     icon: Trophy,
-    title: "Results Guaranteed",
+    title: "Rezultate Garantate",
     description:
-      "Our proven methods and dedicated approach ensure you'll see the changes you desire.",
+      "Metodele noastre testate și abordarea dedicată garantează că vei vedea schimbările dorite.",
   },
   {
     id: 5,
     icon: Heart,
-    title: "Supportive Community",
+    title: "Comunitate de Suport",
     description:
-      "Join a community of like-minded individuals all working towards their best selves.",
+      "Alătură-te unei comunități de oameni cu aceleași obiective, care lucrează pentru a deveni cea mai bună versiune a lor.",
   },
   {
     id: 6,
     icon: Zap,
-    title: "Expertise",
+    title: "Expertiză",
     description:
-      "From HIIT to Yoga, we have experience with any type of training. You keep things fresh and discover your passion.",
+      "De la HIIT la Yoga, avem experiență cu orice tip de antrenament. Păstrează lucrurile proaspete și descoperă-ți pasiunea.",
   },
 ];
 
 export const interests = [
-  "Weight Loss",
-  "Muscle Building & Strength",
-  "Nutrition & Diet Planning",
-  "1-on-1 Personal Training",
-  "Group Classes",
-  "Online Coaching",
-  "Other",
+  "Slăbire",
+  "Masă Musculară & Forță",
+  "Nutriție & Planificare Alimentară",
+  "Antrenament Personal 1 la 1",
+  "Clase de Grup",
+  "Coaching Online",
+  "Altele",
 ];
 
 export const memberships = [
   {
-    title: "Basic",
+    title: "De Bază",
     price: "$29",
-    period: "month",
-    description: "Perfect for beginners starting their fitness journey",
+    period: "lună",
+    description: "Perfect pentru începători care își încep călătoria în fitness",
     features: [
-      "Unlock all the workout plans",
-      "Choose from multiple diets",
-      "Access our private community",
-      "Online fitness tracking",
+      "Deblochează toate planurile de antrenament",
+      "Alege dintre mai multe diete",
+      "Acces la comunitatea noastră privată",
+      "Monitorizare fitness online",
     ],
   },
   {
     title: "Premium",
     price: "$59",
-    period: "month",
-    description: "Our most popular choice for fitness enthusiasts",
+    period: "lună",
+    description: "Alegerea noastră cea mai populară pentru pasionații de fitness",
     features: [
-      "1 on 1 sessions weekly",
-      "Choose your preferred coach",
-      "Sign up in community classes",
-      "Personalized assessment phase",
-      "Personalized workout plans",
-      "Nutrition and diet insights",
+      "Sesiuni 1 la 1 săptămânal",
+      "Alege-ți antrenorul preferat",
+      "Înscrie-te la clasele comunității",
+      "Fază de evaluare personalizată",
+      "Planuri de antrenament personalizate",
+      "Recomandări de nutriție și dietă",
     ],
     popular: true,
   },
   {
     title: "Elite",
     price: "$99",
-    period: "month",
-    description: "For the truly dedicated out there",
+    period: "lună",
+    description: "Pentru cei cu adevărat dedicați",
     features: [
-      "24/7 coach support",
-      "Daily check ins",
-      "Personal training sessions",
-      "Detailed insights about your performance",
-      "Monthly body composition analysis",
-      "Niche tips and tricks",
+      "Suport din partea antrenorului 24/7",
+      "Verificări zilnice",
+      "Sesiuni de antrenament personal",
+      "Analize detaliate despre performanța ta",
+      "Analiză lunară a compoziției corporale",
+      "Sfaturi și trucuri de nișă",
     ],
   },
 ];

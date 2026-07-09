@@ -49,32 +49,32 @@ const Contact = () => {
       <div className="container px-4 mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.2] mb-6">
-            Sign Up for a Private Discussion with <br />
-            <span className="text-gradient-blue">One of Our Experts</span>
+            Programează o Discuție Privată cu <br />
+            <span className="text-gradient-blue">Unul Dintre Experții Noștri</span>
           </h1>
           <p className="text-gray-300 text-lg">
-            Every transformation starts with a conversation.
+            Fiecare transformare începe cu o conversație.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-start">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-8 max-w-5xl mx-auto items-start">
           <div className="glass-card rounded-xl p-8 space-y-8 animate-on-scroll">
-            <h2 className="text-2xl font-bold">Get in Touch</h2>
+            <h2 className="text-2xl font-bold">Ia Legătura</h2>
 
             <div className="space-y-6">
               <ContactInfoItem
                 icon={Mail}
-                label="Email Us"
+                label="Scrie-ne"
                 value="coach@gencoach.com"
               />
               <ContactInfoItem
                 icon={Phone}
-                label="Call Us"
+                label="Sună-ne"
                 value="+40 777 777 777"
               />
               <ContactInfoItem
                 icon={MapPin}
-                label="Visit Us"
+                label="Vizitează-ne"
                 value="Bulevardul Lacul Tei 124, 020396 București"
               />
             </div>
@@ -82,11 +82,11 @@ const Contact = () => {
             <div className="rounded-lg border border-white/10 p-5">
               <div className="flex items-center gap-2 mb-3">
                 <Clock className="w-5 h-5 text-purple-400" />
-                <h3 className="font-semibold">Working Hours</h3>
+                <h3 className="font-semibold">Program de Lucru</h3>
               </div>
               <div className="flex justify-between text-sm text-gray-300 mb-1">
-                <span>Monday - Sunday</span>
-                <span>Gains never stop</span>
+                <span>Luni - Duminică</span>
+                <span>Progresul nu se oprește niciodată</span>
               </div>
             </div>
           </div>
@@ -95,30 +95,32 @@ const Contact = () => {
             {submitted ? (
               <div className="text-center py-12">
                 <h2 className="text-2xl font-bold mb-2">
-                  Thanks, {form.name.split(" ")[0] || "there"}!
+                  Mulțumim, {form.name.split(" ")[0] || "prietene"}!
                 </h2>
                 <p className="text-gray-400">
-                  We've received your request and will reach out within 24
-                  hours.
+                  Am primit cererea ta și te vom contacta în cel mult 24 de
+                  ore.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <h2 className="text-2xl font-bold mb-1">Send Us a Message</h2>
+                  <h2 className="text-2xl font-bold mb-1">
+                    Trimite-ne un Mesaj
+                  </h2>
                   <p className="text-gray-400 text-sm">
-                    Fill out the form and we'll respond with a plan tailored to
-                    you.
+                    Completează formularul și îți vom răspunde cu un plan
+                    personalizat.
                   </p>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name">Nume</Label>
                     <Input
                       id="name"
                       name="name"
-                      placeholder="Your name"
+                      placeholder="Numele tău"
                       value={form.name}
                       onChange={handleChange}
                       required
@@ -130,7 +132,7 @@ const Contact = () => {
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="you@example.com"
+                      placeholder="tu@exemplu.com"
                       value={form.email}
                       onChange={handleChange}
                       required
@@ -139,7 +141,7 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="interest">Interests</Label>
+                  <Label htmlFor="interest">Interese</Label>
                   <Select
                     value={form.interest}
                     onValueChange={(value) =>
@@ -149,7 +151,7 @@ const Contact = () => {
                     required
                   >
                     <SelectTrigger id="interest" className="w-full">
-                      <SelectValue placeholder="Select what you're interested in" />
+                      <SelectValue placeholder="Selectează ce te interesează" />
                     </SelectTrigger>
                     <SelectContent>
                       {interests.map((item) => (
@@ -162,12 +164,12 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message">Mesaj</Label>
                   <Textarea
                     id="message"
                     name="message"
                     rows={5}
-                    placeholder="Tell us about your goals..."
+                    placeholder="Spune-ne despre obiectivele tale..."
                     value={form.message}
                     onChange={handleChange}
                     required
@@ -179,7 +181,7 @@ const Contact = () => {
                   size="lg"
                   className="w-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 group"
                 >
-                  Send Request
+                  Trimite Cererea
                   <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </form>

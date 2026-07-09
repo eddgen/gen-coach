@@ -29,7 +29,7 @@ const MobileMenu = ({isMobileMenuOpen, toggleMobileMenu}) => {
               toggleMobileMenu();
             }}
           >
-            Get in touch
+            Ia legătura
           </Button>
         </div>
       </div>

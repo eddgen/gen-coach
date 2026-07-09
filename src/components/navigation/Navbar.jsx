@@ -71,14 +71,14 @@ const Navbar = () => {
             size="lg"
             onClick={() => navigate("/contact")}
           >
-            Get in touch
+            Ia legătura
           </Button>
         </div>
 
         <button
           onClick={toggleMobileMenu}
           className="md:hidden text-white"
-          aria-label="Toggle menu"
+          aria-label="Comută meniul"
           aria-expanded={isMobileMenuOpen}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

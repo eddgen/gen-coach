@@ -7,7 +7,7 @@ import { Input } from "./ui/input";
 import SimpleIcon from "./SimpleIcon";
 import { navLinks } from "../data";
 
-const footerLinks = [{ id: 0, to: "/", label: "Home" }, ...navLinks];
+const footerLinks = [{ id: 0, to: "/", label: "Acasă" }, ...navLinks];
 
 const socialLinks = [
   { id: "facebook", href: "#", label: "Facebook", icon: siFacebook },
@@ -40,8 +40,8 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-sm">
-              Transform your body and mind with our premier fitness
-              experience. Your journey to a better you starts here.
+              Transformă-ți corpul și mintea cu experiența noastră premium de
+              fitness. Călătoria ta către o versiune mai bună începe aici.
             </p>
             <div className="flex gap-4">
               {socialLinks.map(({ id, href, label, icon }) => (
@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6">Linkuri Rapide</h3>
             <ul className="space-y-3">
               {footerLinks.map(({ id, to, label }) => (
                 <li key={id}>
@@ -76,12 +76,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6">Newsletter</h3>
             <p className="text-gray-400 mb-4">
-              Subscribe for fitness tips, updates, and special offers.
+              Abonează-te pentru sfaturi de fitness, noutăți și oferte
+              speciale.
             </p>
             <form onSubmit={handleSubscribe} className="flex">
               <Input
                 type="email"
-                placeholder="Your email"
+                placeholder="Emailul tău"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -91,7 +92,7 @@ const Footer = () => {
                 type="submit"
                 className="rounded-l-none bg-linear-to-r from-blue-600 to-purple-600 hover:from-purple-700 hover:to-pink-700 text-white border-0"
               >
-                Subscribe
+                Abonează-te
               </Button>
             </form>
           </div>
@@ -99,7 +100,8 @@ const Footer = () => {
 
         <div className="mt-16 pt-8 border-t border-white/10 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Gen Coach. All rights reserved.
+            © {new Date().getFullYear()} Gen Coach. Toate drepturile
+            rezervate.
           </p>
         </div>
       </div>
@@ -107,7 +109,7 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         className="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-purple-700 hover:to-pink-700 flex items-center justify-center shadow-lg transition-colors"
-        aria-label="Scroll to top"
+        aria-label="Derulează sus"
       >
         <ArrowUp size={20} />
       </button>
